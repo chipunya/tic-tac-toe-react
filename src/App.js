@@ -78,32 +78,27 @@ function App() {
     <div className="App">
       <div
         className="container"
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          width: "400px",
-        }}
+        // style={{
+        //   display: "flex",
+        //   flexWrap: "wrap",
+        //   width: "400px",
+        // }}
       >
         {cells.map((cell, i) => {
           return (
             <div
+              className="cell"
               onClick={() => handleClick(cell)}
               key={i}
               style={{
-                width: "120px",
-                height: "120px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "1px solid black",
                 color: dataForX.includes(i)
                   ? "red"
                   : dataForO.includes(i)
-                  ? "blue"
+                  ? "yellow"
                   : "transparent",
               }}
             >
-              <h1>{cell}</h1>
+              {cell}
             </div>
           );
         })}
