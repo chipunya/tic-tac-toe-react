@@ -70,20 +70,9 @@ function App() {
     setGameStatus("");
   };
 
-  console.log("data for X", dataForX);
-  console.log("data for O", dataForO);
-  console.log(winner);
-
   return (
     <div className="App">
-      <div
-        className="container"
-        // style={{
-        //   display: "flex",
-        //   flexWrap: "wrap",
-        //   width: "400px",
-        // }}
-      >
+      <div className="container">
         {cells.map((cell, i) => {
           return (
             <div
